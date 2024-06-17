@@ -31,6 +31,11 @@ TaskManager.defineTask(BACKGROUND_FETCH_TASK, async () => {
   return BackgroundFetch.BackgroundFetchResult.NewData;
 });
 
+// registering task in global state too?
+BackgroundFetch.registerTaskAsync(BACKGROUND_FETCH_TASK, {
+  minimumInterval: 60 * 15, // 15 minutes
+});
+
 export default function App() {
   const [timesRan, setTimesRan] = useState(0);
 
@@ -40,11 +45,6 @@ export default function App() {
 
   useEffect(() => {
     checkTimesRan();
-
-    // registering task in global state too?
-    BackgroundFetch.registerTaskAsync(BACKGROUND_FETCH_TASK, {
-      minimumInterval: 60 * 15, // 15 minutes
-    });
   }, []);
 
   return (
