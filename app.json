@@ -12,16 +12,18 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "UIBackgroundModes": [
+          "fetch"
+        ]
+      },
+      "bundleIdentifier": "com.kiorq.expo-router-taskmanager2"
     },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+    "extra": {
+      "eas": {
+        "projectId": "c593637a-9722-4843-b07f-1a4faf93a3e2"
       }
-    },
-    "web": {
-      "favicon": "./assets/favicon.png"
     }
   }
 }
