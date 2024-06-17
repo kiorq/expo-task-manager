@@ -5,7 +5,7 @@ This setup includes TaskManager, in this case, Background Fetch, with expo-route
 # Details
 
 - Function defined in global scope, as mentioned in docs for `TaskManager.defineTask` (see https://docs.expo.dev/versions/latest/sdk/task-manager/#taskmanagerdefinetaskttaskname-taskexecutor)
-- Background Fetch is registered globally too (May not be correct?)
+- Background Fetch is registered globally too (i've also tried registering in a useEffect hook)
 - Task just increments a counter in AsyncStorage
 - UI shows value of counter, showing the times the Background fetch task was executed.
 - UI include a refresh button, that just retrieves the counter value
